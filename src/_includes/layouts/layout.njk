@@ -1,0 +1,20 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="{{ '/assets/img/favicon.ico' | url }}">
+    <link
+    rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+    <!-- Grab title from the page data and dump it here -->
+    <title>{{ title }}</title>
+  </head>
+  <body class="bg-white dark:bg-gray-900 transition-all ease-in-out ">
+    {% include "partials/header.njk" %}
+    <!-- Grab the content from the page data, dump it here, and mark it as safe -->
+    <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
+      <div class="max-w-7xl mx-auto mt-32 px-4 pb-5"> {{ content | safe }}
+    </div>
+    <script src="{{ '/assets/js/bundle.js' | url }}"></script>
+  </body>
+</html>
